@@ -19,9 +19,16 @@ preference_section = 'general'
 
 allowed_domains = ['developer.mozilla.org', 'javascript.info']
 
+
 def is_domain_allowed(url):
     domain = urlparse(url).netloc
-    return any(allowed_domain in domain for allowed_domain in allowed_domains)
+    print("Domain:", domain)
+    allowed = any(allowed_domain in domain for allowed_domain in allowed_domains)
+    print("Allowed:", allowed)
+    return allowed
+# def is_domain_allowed(url):
+#     domain = urlparse(url).netloc
+#     return any(allowed_domain in domain for allowed_domain in allowed_domains)
 
 def post_search(request, search):
     filtered_results = [
