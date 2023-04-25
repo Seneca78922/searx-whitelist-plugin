@@ -18,7 +18,7 @@ preference_section = 'general'
 
 
 allowed_domains = ['developer.mozilla.org', 'javascript.info', 'wikipedia.org', 'w3.org',
-                   'developers.google.com',]
+                   'developers.google.com']
 
 
 def is_domain_allowed(url):
